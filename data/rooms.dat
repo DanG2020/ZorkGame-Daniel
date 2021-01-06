@@ -1,6 +1,102 @@
 Room Name: Entrance Courtyard
-Room Description:  Here, you can begin your journey around Hogwarts.
-Exit Rooms: N-The Great Hall, E-ViaductEntrance, W-Boathouse
+Room Description:  This is the main entrance to Hogwarts. Here, you can begin your journey around Hogwarts.
+Exit Rooms: N-The Great Hall, E-Viaduct Entrance, W-Boathouse
 
 Room Name: The Great Hall
-Room 
+Room Description: This is where the Hogwarts students and faculty eat their meals.
+Exit Rooms: S-Entrance Courtyard, E-Headmaster's Office, w-Caretaker's Office
+
+Room Name: Viaduct Entrance
+Room Description: This is Viaduct Entrance to Hogwarts with high ceilings and windows.
+Exit Rooms: N-Lockhart's Classroom, E-Long Gallery, S-Lounge, W-The Great Hall
+
+Room Name: Boathouse
+Room Description: This room stores the Hogwarts Boats.
+Exit Rooms:
+
+Room Name: Headmaster's Office
+Room Description:
+Exit Rooms:
+
+Room Name: Caretaker's Office
+Room Description: This is Argus Filch's office. There are confiscated items and a key to the Restricted Section of the library.
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+Room Name: 
+Room Description: Lounge
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:
+
+
+Room Name: 
+Room Description:
+Exit Rooms:

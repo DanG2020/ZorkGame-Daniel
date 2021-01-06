@@ -4,92 +4,80 @@ Exit Rooms: N-The Great Hall, E-Viaduct Entrance, W-Boathouse
 
 Room Name: The Great Hall
 Room Description: This is where the Hogwarts students and faculty eat their meals.
-Exit Rooms: S-Entrance Courtyard, E-Headmaster's Office, w-Caretaker's Office
+Exit Rooms: S-Entrance Courtyard, E-Great Staircase Tower, w-Caretaker's Office
 
 Room Name: Viaduct Entrance
 Room Description: This is Viaduct Entrance to Hogwarts with high ceilings and windows.
-Exit Rooms: N-Lockhart's Classroom, E-Long Gallery, S-Lounge, W-The Great Hall
+Exit Rooms: N-Boys Washroom, E-Long Gallery, S-Girls Washroom, W-The Great Hall
 
 Room Name: Boathouse
 Room Description: This room stores the Hogwarts Boats.
-Exit Rooms:
+Exit Rooms: E-The Great Hall, 
 
-Room Name: Headmaster's Office
-Room Description:
-Exit Rooms:
+Room Name: Great Staircase Tower
+Room Description: Here, there are many paintings and staircases that connect to other parts of the school. 
+Exit Rooms: W-The Great Hall, E-The Quad, U-Third Floor
 
 Room Name: Caretaker's Office
 Room Description: This is Argus Filch's office. There are confiscated items and a key to the Restricted Section of the library.
-Exit Rooms:
+Exit Rooms: E-The Great Hall
 
-Room Name: 
+Room Name: Boys Washroom
+Room Description: This is the boys Washroom, there you see Ron Weasley. If you have his rat, he will give you Harry's invisibility Cloak.
+Exit Rooms: S-Viaduct Entrance
+
+Room Name: Girls Washroom
+Room Description: There is a troll in the washroom and you get squished.
+Exit Rooms: N-Viaduct Entrance
+
+Room Name: Third Floor
+Room Description: This is the restricted floor at Hogwarts, you cannot be seen around here.
+Exit Rooms: N-Trophy Room, U-Headmaster's Office
+
+Room Name: Headmaster's Office
+Room Description: This is the office for the current headmaster, Albus Dumbledore.
+Exit Rooms: D-Third Floor
+
+Room Name: The Quad
+Room Description: This is one of Hogwarts's courtyards.
+Exit Rooms:  N-Gryffindor Common Room, E-Library, W-Great Staircase Tower
+
+Room Name: Long Gallery
 Room Description:
-Exit Rooms:
+Exit Rooms: N-Middle Courtyard, E-Bell Tower, S-Wand Wizadry Classroom, W-Viaduct Entrance
 
-Room Name: 
-Room Description:
-Exit Rooms:
+Room Name: Wand Wizadry Classroom
+Room Description: Here, Professor Flitwick will teach students different spells.
+Exit Rooms: N-Long Gallery, E-Defense Against The Dark Arts
 
-Room Name: 
-Room Description:
-Exit Rooms:
-
-Room Name: 
-Room Description: Lounge
-Exit Rooms:
-
-Room Name: 
-Room Description:
-Exit Rooms:
-
-Room Name: 
-Room Description:
-Exit Rooms:
-
-Room Name: 
-Room Description:
-Exit Rooms:
+Room Name: Defense Against The Dark Arts
+Room Description: This is the defense against the dark arts classroom, Professor Lupin is ready to teach defensive spells.
+Exit Rooms: W-Potions Classroom
 
 
-Room Name: 
-Room Description:
+Room Name: Potions Classroom
+Room Description: When you enter the Potions Classroom, Snape gives you a bad potion.
+Exit Rooms: E-Defense Against The Dark Arts
+
+Room Name: Bell Tower
+Room Description: 
+Exit Rooms: W- Long Gallery, E-Green Houses
+
+
+Room Name: Garden
+Room Description: This is Hogwarts garden run by
 Exit Rooms:
 
 
-Room Name: 
-Room Description:
-Exit Rooms:
-
-
-Room Name: 
-Room Description:
-Exit Rooms:
-
-
-Room Name: 
-Room Description:
-Exit Rooms:
-
-
-Room Name: 
-Room Description:
-Exit Rooms:
-
-
-Room Name: 
+Room Name: Library 
 Room Description:
 Exit Rooms:
 
 
-
-Room Name: 
+Room Name: Corridor 
 Room Description:
 Exit Rooms:
 
-
-Room Name: 
-Room Description:
-Exit Rooms:
 
 
 Room Name: 

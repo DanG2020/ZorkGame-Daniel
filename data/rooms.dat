@@ -3,13 +3,13 @@ Room Description:  This is the main entrance to Hogwarts. Here, you can begin yo
 Exit Rooms: N-The Great Hall, E-Viaduct Entrance, W-Boathouse
 Room Name: The Great Hall
 Room Description: This is where the Hogwarts students and faculty eat their meals.
-Exit Rooms: S-Entrance Courtyard, E-Great Staircase Tower, w-Caretaker's Office
+Exit Rooms: S-Entrance Courtyard, E-Great Staircase Tower, W-Caretaker's Office
 Room Name: Viaduct Entrance
 Room Description: This is Viaduct Entrance to Hogwarts with high ceilings and windows.
 Exit Rooms: N-Boys Washroom, E-Long Gallery, S-Girls Washroom, W-The Great Hall
 Room Name: Boathouse
 Room Description: This room stores the Hogwarts Boats.
-Exit Rooms: E-The Great Hall, 
+Exit Rooms: E-Entrance Courtyard 
 Room Name: Great Staircase Tower
 Room Description: Here, there are many paintings and staircases that connect to other parts of the school. 
 Exit Rooms: W-The Great Hall, E-Gryffindor Common Room, U-Third Floor
@@ -29,7 +29,7 @@ Room Name: Headmaster's Office
 Room Description: This is the office for the current headmaster, Albus Dumbledore.
 Exit Rooms: D-Middle Courtyard
 Room Name: Long Gallery
-Room Description:
+Room Description: This is the central building in Hogwarts where all the classes are located.
 Exit Rooms: N-Middle Courtyard, E-Bell Tower, S-Wand Wizadry Classroom, W-Viaduct Entrance
 Room Name: Wand Wizadry Classroom
 Room Description: Here, Professor Flitwick will teach students different spells.
@@ -41,7 +41,7 @@ Room Name: Potions Classroom
 Room Description: When you enter the Potions Classroom, Snape gives you a bad potion.
 Exit Rooms: E-Defense Against The Dark Arts
 Room Name: Bell Tower
-Room Description: 
+Room Description: This is the entrance to the Green Houses.
 Exit Rooms: W- Long Gallery, E-Green Houses
 Room Name: Green Houses
 Room Description: This is the Hogwarts Green House Professor Sprout teaches you about a plant that makes you sleep.
@@ -73,4 +73,3 @@ Exit Rooms: E-Winged Keys Room, W-Villain Room
 Room Name: Villain Room
 Room Description: Voldemort is Infront of you.
 Exit Room: E-Chessboard Chamber 
-

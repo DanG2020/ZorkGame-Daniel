@@ -20,7 +20,7 @@ public class Room {
   private String roomName;
   private String description;
   private HashMap<String, Room> exits; // stores exits of this room.
-
+  private Inventory inventory;
   /**
    * Create a room described "description". Initially, it has no exits.
    * "description" is something like "a kitchen" or "an open court yard".
@@ -28,6 +28,7 @@ public class Room {
   public Room(String description) {
     this.description = description;
     exits = new HashMap<String, Room>();
+    inventory = new Inventory();
   }
 
   public Room() {
@@ -35,6 +36,7 @@ public class Room {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";
     exits = new HashMap<String, Room>();
+    inventory = new Inventory();
   }
 
   public void setExit(char direction, Room r) throws Exception {

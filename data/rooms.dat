@@ -6,7 +6,7 @@ Room Description: This is where the Hogwarts students and faculty eat their meal
 Exit Rooms: S-Entrance Courtyard, E-Great Staircase Tower, W-Caretaker's Office
 Room Name: Viaduct Entrance
 Room Description: This is Viaduct Entrance to Hogwarts with high ceilings and windows.
-Exit Rooms: N-Boys Washroom, E-Long Gallery, S-Girls Washroom, W-The Great Hall
+Exit Rooms: N-Boys Washroom, E-Long Gallery, S-Girls Washroom, W-Courtyard Entrance
 Room Name: Boathouse
 Room Description: This room stores the Hogwarts Boats.
 Exit Rooms: E-Entrance Courtyard 
@@ -31,7 +31,7 @@ Exit Rooms: D-Middle Courtyard
 Room Name: Long Gallery
 Room Description: This is the central building in Hogwarts where all the classes are located.
 Exit Rooms: N-Middle Courtyard, E-Bell Tower, S-Wand Wizadry Classroom, W-Viaduct Entrance
-Room Name: Wand Wizadry Classroom
+Room Name: Wand Wizardry Classroom
 Room Description: Here, Professor Flitwick will teach students different spells.
 Exit Rooms: N-Long Gallery, E-Defense Against The Dark Arts
 Room Name: Defense Against The Dark Arts
@@ -72,4 +72,7 @@ Room Description: There is a large chessboard Infront of you.
 Exit Rooms: E-Winged Keys Room, W-Villain Room 
 Room Name: Villain Room
 Room Description: Voldemort is Infront of you.
-Exit Room: E-Chessboard Chamber 
+Exit Rooms: E-Chessboard Chamber 
+Room Name: Quidditch Match
+Room Description: A quidditch match has just started and you are playing.
+Exit Rooms: W-Broomstick Practice 

@@ -1,0 +1,48 @@
+Item Name: Key
+Item Description: A key to the Restricted Section of the library.
+Openable: true
+Room: CARETAKER'S OFFICE
+Item Name: Food
+Item Description: The food will give you health.
+Openable: true
+Room: THE GREAT HALL
+Item Name: Rat(Peter Pettigrew)
+Item Description: This is Ron's rat.
+Openable: true
+Room: GRYFFINDOR COMMON ROOM
+Item Name: Invisibility Cloak
+Item Description: This is Harry's invisibility cloak.
+Openable: false
+Room: BOYS WASHROOM
+Item Name: Broom
+Item Description: This broom is enchanted to fly.
+Openable: false
+Room: QUIDDITCH MATCH
+Item Name: Introduction to Wizard's Chess Book
+Item Description: This is a book that will teach you Wizard's Chess.
+Openable: true
+Room: RESTRICTED LIBRARY
+Item Name: Phoenix Tears
+Item Description: These tears will give you instant health.
+Openable: true
+Room: HEADMASTER'S OFFICE
+Item Name: Sleeping Draught
+Item Description: This Sleeping Draught is made from Valerian Sprigs from the green houses and will make anyone fall instantly to sleep.
+Openable: true
+Room: GREEN HOUSES
+Item Name: Stun Spell
+Item Description: 
+Openable: 
+Room: Defense Against The Dark Arts
+Item Name: Alohomora
+Item Description: Allows user to unlock locked doors.
+Openable: true
+Room: Wand Wizardry Classroom
+Item Name: Wingardium leviosa
+Item Description: Allows any item to levitate and will save you from trolls.
+Openable: true
+Room: Wand Wizardry Classroom
+Item Name: Key
+Item Description: This is a flying key that is needed to open the next door.
+Openable: false
+Room: Winged Keys Room

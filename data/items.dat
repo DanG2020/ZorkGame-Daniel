@@ -1,48 +1,49 @@
 Item Name: Key
 Item Description: A key to the Restricted Section of the library.
-Openable: true
-Room: CARETAKER'S OFFICE
+Openable: false
+Room: CARETAKER'S_OFFICE
 Item Name: Food
 Item Description: The food will give you health.
-Openable: true
-Room: THE GREAT HALL
+Openable: false
+Room: THE_GREAT_HALL
 Item Name: Rat(Peter Pettigrew)
 Item Description: This is Ron's rat.
 Openable: true
-Room: GRYFFINDOR COMMON ROOM
+Room: GRYFFINDOR_COMMON_ROOM
 Item Name: Invisibility Cloak
 Item Description: This is Harry's invisibility cloak.
 Openable: false
-Room: BOYS WASHROOM
+Room: BOYS_WASHROOM
 Item Name: Broom
 Item Description: This broom is enchanted to fly.
 Openable: false
-Room: QUIDDITCH MATCH
+Room: QUIDDITCH_MATCH
 Item Name: Introduction to Wizard's Chess Book
 Item Description: This is a book that will teach you Wizard's Chess.
-Openable: true
-Room: RESTRICTED LIBRARY
+Openable: false
+Room: LIBRARY_RESTRICTED_SECTION
 Item Name: Phoenix Tears
 Item Description: These tears will give you instant health.
 Openable: true
-Room: HEADMASTER'S OFFICE
+Room: HEADMASTER'S_OFFICE
 Item Name: Sleeping Draught
 Item Description: This Sleeping Draught is made from Valerian Sprigs from the green houses and will make anyone fall instantly to sleep.
 Openable: true
-Room: GREEN HOUSES
+Room: GREEN_HOUSES
 Item Name: Stun Spell
-Item Description: 
-Openable: 
-Room: Defense Against The Dark Arts
+Item Description: Able to stun dark wizards
+Openable: true
+Room: DEFENSE_AGAINST_THE_DARK_ARTS
 Item Name: Alohomora
 Item Description: Allows user to unlock locked doors.
 Openable: true
-Room: Wand Wizardry Classroom
+Room: WAND_WIZARDRY_CLASSROOM
 Item Name: Wingardium leviosa
 Item Description: Allows any item to levitate and will save you from trolls.
 Openable: true
-Room: Wand Wizardry Classroom
+Room: WAND_WIZARDRY_CLASSROOM
 Item Name: Key
 Item Description: This is a flying key that is needed to open the next door.
 Openable: false
-Room: Winged Keys Room
+Room: WINGED_KEYS_ROOM
+

@@ -8,6 +8,15 @@ public Inventory(){
     public boolean addItem(Item item){
         return items.add(item);
     }
+
+    public Item contains(String name){
+        for (int i = 0; i < items.size(); i++){
+            if(name.equals(items.get(i).getName())) {
+                return items.get(i);
+            }
+          }
+          return null;
+    }
     // Returns the item based on the name given
     // If the item is not in the inventory return null
     public Item removeItem(String name) {
@@ -19,7 +28,11 @@ public Inventory(){
         }
         return null;
     }
-    public String toString(){}
+    public String toString(){
+
+        if(items.size() == 0){
+            return "No items.";
+        }
         String msg = "";
 
         for(Item i : items) {
@@ -27,5 +40,15 @@ public Inventory(){
         }
 
         return msg;
+    }
+    //checks if user has the item 
+    public boolean hasItem(String itemName){
+        for(Item i : items){
+            if(i.getName().equals(itemName)){
+                return true;
+            }
+        }
+            return false;
+        
     }
 }

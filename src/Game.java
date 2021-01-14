@@ -1,5 +1,3 @@
-package com.bayviewglen.zork;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -126,9 +124,14 @@ class Game {
 		try {
 			initRooms("data/Rooms.dat");	// creates the map from the rooms.dat file
 			// initRooms is responsible for building/ initializing the masterRoomMap (private instance variable)
-			currentRoom = masterRoomMap.get("ATTIC");	// the key for the masterRoomMap is the name of the room all in Upper Case (spaces replaced with _)
+			currentRoom = masterRoomMap.get("ENTRANCE_COURTYARD");	// the key for the masterRoomMap is the name of the room all in Upper Case (spaces replaced with _)
 			inventory = new Inventory();
 			initItems("data/items.dat");
+			/*currentRoom.getInventory().addItem(new Item("Wand", "A wizards wand", false));
+			Item bag = new Item("Bag", "a brown paper bag", true);
+				bag.addItem(new Item("Apple", "Red Apple"));
+				bag.addItem(new Item("Juice", "Red Apple Juice"));
+			currentRoom.getInventory().addItem(bag); */
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -160,8 +163,8 @@ class Game {
 	 */
 	private void printWelcome() {
 		System.out.println();
-		System.out.println("Welcome to Zork!");
-		System.out.println("Zork is a new, incredibly boring adventure game.");
+		System.out.println("Welcome to Hogwarts!");
+		System.out.println("In this game, you will need to collect items in order to defeat the villian in the end");
 		System.out.println("Type 'help' if you need help.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -206,7 +209,7 @@ class Game {
 			else
 				dropItem(command.getSecondWord());
 		} else if (commandWord.equals("i")) {
-			System.out.println(inventory);
+			System.out.println("You are carrying the following:" + inventory);
 		} else if (commandWord.equals("open")) {
 			if (!command.hasSecondWord())
 				System.out.println("Open what?");
@@ -283,6 +286,16 @@ class Game {
 		return true;
 	}
 
+	/*private boolean fly() {
+		if(Inventory.hasItem("Broom")){
+			System.out.println("You can fly");
+			return true;
+		}
+		else{
+			System.out.println("You can't fly, you need a broom");
+			return false;
+		}
+	} */
 // implementations of user commands:
 	/**
 	 * Print out some help information. Here we print some stupid, cryptic message
@@ -300,6 +313,8 @@ class Game {
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
 	 */
+
+
 	private void goRoom(Command command) {
 		if (!command.hasSecondWord() && ("udeswn".indexOf(command.getCommandWord()) < 0)) {
 			// if there is no second word, we don't know where to go...
@@ -328,6 +343,12 @@ class Game {
 		Room nextRoom = currentRoom.nextRoom(direction);
 		if (nextRoom == null)
 			System.out.println("There is no door!");
+		else if(currentRoom.getRoomName().equals("Girls Washroom")){
+			Room.adjustment += 10;
+		}
+		/*else if(currentRoom.getRoomName().equals("Middle Courtyard") ){
+			
+		} */
 		else {
 			currentRoom = nextRoom;
 			System.out.println(currentRoom.longDescription());

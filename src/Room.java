@@ -21,6 +21,7 @@ public class Room {
   private String description;
   private HashMap<String, Room> exits; // stores exits of this room.
   private Inventory inventory;
+  public static int adjustment = 0;;
   /**
    * Create a room described "description". Initially, it has no exits.
    * "description" is something like "a kitchen" or "an open court yard".
@@ -39,6 +40,9 @@ public class Room {
     inventory = new Inventory();
   }
 
+  public Inventory getInventory() {
+    return inventory;
+  }
   public void setExit(char direction, Room r) throws Exception {
     String dir = "";
     switch (direction) {
@@ -90,6 +94,13 @@ public class Room {
    * Return the description of the room (the one that was defined in the
    * constructor).
    */
+  
+  private int healthamount(int adjustment){
+    
+    int healthamount = 100;
+    int currenthealth = healthamount - adjustment;
+    return currenthealth;
+  }
   public String shortDescription() {
     return "Room: " + roomName + "\n\n" + description;
   }
@@ -100,7 +111,7 @@ public class Room {
    */
   public String longDescription() {
 
-    return "Room: " + roomName + "\n\n" + description + "\n" + exitString();
+    return "Room: " + roomName + "\n\n" + description + "\n" + exitString() + "\nCurrent Health: " + healthamount(adjustment)+ "\nThe room contains: \n" + inventory;
   }
 
   /**

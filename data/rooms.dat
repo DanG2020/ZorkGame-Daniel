@@ -24,7 +24,7 @@ Room Description: There is a troll in the washroom, lose 50 health.
 Exit Rooms: N-Viaduct Entrance
 Room Name: Third Floor
 Room Description: This is the restricted floor at Hogwarts, you cannot be seen around here.
-Exit Rooms: N-Trophy Room, D-Great Staircase
+Exit Rooms: N-Trophy Room, D-Great Staircase Tower
 Room Name: Headmaster's Office
 Room Description: This is the office for the current headmaster, Albus Dumbledore.
 Exit Rooms: D-Middle Courtyard
@@ -50,11 +50,11 @@ Room Name: Library
 Room Description: This is the main library at Hogwarts.
 Exit Rooms: E-Library Restricted Section, W-Middle Courtyard
 Room Name: Library Restricted Section
-Room Description: This is the restricted section in the library, you need a key to enter, on the table you can see a book on Wizards Chess that might be useful.
+Room Description: This is the restricted section in the library,on the table you can see a book on Wizards Chess that might be useful.
 Exit Rooms: W-Library
 Room Name: Gryffindor Common Room
 Room Description: In the Gryffindor Common Room, you see Ron's rat.
-Exit Rooms: W-The Great Staircase Tower, E-Middle Courtyard
+Exit Rooms: W-Great Staircase Tower, E-Middle Courtyard
 Room Name: Middle Courtyard
 Room Description: This is an open grassy area in the inner part of Hogwarts.
 Exit Rooms: U-Headmaster's Office, N-Broomstick Practice, S-Long Gallery, E-Library, W-Gryffindor Common Room

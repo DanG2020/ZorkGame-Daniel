@@ -285,10 +285,11 @@ class Game {
 						}
 					 }
 				else if(command.getSecondWord().equals("Key")){
-					if(currentRoom.getRoomName().equals("Restricted Library")){
+					if(currentRoom.getRoomName().equals("Library")){
 						if(inventory.hasItem("Key")){
 							System.out.println("You have used your key and unlocked the restriced library");
 							usedKey = true;
+							inventory.removeItem("Key");
 						}else{
 							System.out.println("You do not have a key");
 						}
@@ -341,12 +342,12 @@ class Game {
 				}
 			}
 			else if (commandWord.equals("read")) {
-				if(inventory.hasItem("Introduction to Wizard's Chess Book")){
+				if(inventory.hasItem("WizardsChessBook")){
 					System.out.println("You have just read Introduction to Wizard's Chess Book");
 					hasRead = true;
 				}
 				else{
-					System.out.println("You don't have a book to read, grab Introduction to Wizard's Chess, its a good book, buts its in the restricted section of the library ");
+					System.out.println("You don't have a book to read, grab WizardChessBook, its a good book, buts its in the restricted section of the library ");
 				}
 			}
 			/*else if (commandWord.equals("play")) {
@@ -521,6 +522,10 @@ class Game {
 		else if(currentRoom.getRoomName().equals("Viaduct Entrance") && lost10 == true){
 			lost10 = false;
 		}
+		else if(nextRoom.getRoomName().equals("Library Restricted Section") && usedKey == false){
+				System.out.println("You cannot enter this room without a key");
+
+					}
 		else if(nextRoom.getRoomName().equals("Quidditch Match") && practiced == false){
 			System.out.println("You cannot access this room until you have practiced");			
 		}

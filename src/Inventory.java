@@ -17,6 +17,10 @@ public Inventory(){
           }
           return null;
     }
+
+    public int getSize(){
+        return items.size();
+    }
     // Returns the item based on the name given
     // If the item is not in the inventory return null
     public Item removeItem(String name) {
@@ -51,4 +55,5 @@ public Inventory(){
             return false;
         
     }
+    
 }

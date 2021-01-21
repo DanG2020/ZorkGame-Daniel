@@ -28,7 +28,7 @@ Openable: false
 Room: GRYFFINDOR_COMMON_ROOM
 Item Name: WizardsChessBook
 Item Description: This is a book that will teach you Wizards Chess.
-Openable: true
+Openable: false
 Room: LIBRARY_RESTRICTED_SECTION
 Item Name: PhoenixTears
 Item Description: These tears will give you instant health.

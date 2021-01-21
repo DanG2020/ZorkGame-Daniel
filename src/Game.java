@@ -205,6 +205,7 @@ class Game {
 	private static boolean hasWonChess = true;
 	private static boolean voldemort = false;
 	private static boolean usedStun = false;
+	private static boolean completed = false;
 
 	private boolean processCommand(Command command) {
 		if (command.isUnknown()) {
@@ -255,6 +256,7 @@ class Game {
 						System.out.println("Thanks for getting me my rat, now my rat and I are going to read resurrection methods for fun, Goodbye!");
 						System.out.println("Write take InvisibilityCloak to claim your prize");
 						haslistened = true;
+						completed = true;
 						}
 						else{
 							System.out.println("You cannot give the rat in that room");
@@ -377,10 +379,12 @@ class Game {
 						System.out.println("This room is not locked, no need for key");
 					}
 					 }
-					 else if(command.getSecondWord().equals("PheonixTears")){
+					 else if(command.getSecondWord().equals("PhoenixTears")){
+						Item item = inventory.removeItem("PhoenixTears");
 						System.out.println("You have gained 100 health");
-						Room.healthamount(100);
-						inventory.removeItem("PheonixTears");
+						Room.healthamount(-100);
+						inventory.removeItem("PhoenixTears");
+						masterRoomMap.get("HEADMASTER'S_OFFICE").getInventory().addItem(item);
 
 					 }
 					
@@ -422,7 +426,7 @@ class Game {
 			}
 			else if (commandWord.equals("read")) {
 				if(inventory.hasItem("WizardsChessBook")){
-					System.out.println("You have just read Introduction to Wizard's Chess Book");
+					System.out.println("You have just read Introduction to Wizard's Chess Book, the book says always use the knight");
 					hasRead = true;
 				}
 				else{
@@ -486,30 +490,39 @@ class Game {
 
 	private void eat(String secondWord) {
 		if (secondWord.equals("ChocolateFrogs") && inventory.hasItem("ChocolateFrogs")){
+			Item item = inventory.removeItem("ChocolateFrogs");
 			System.out.println("You have just recovered 20 health");
 			Room.healthamount(-20);
-			inventory.removeItem("ChocolateFrogs");
+		//	inventory.removeItem("ChocolateFrogs");
+			masterRoomMap.get("THE_GREAT_HALL").getInventory().addItem(item);
 		}
 		else if (secondWord.equals("EveryFlavourBeans") && inventory.hasItem("EveryFlavourBeans")){
+			Item item = inventory.removeItem("ChocolateFrogs");
 			System.out.println("You have just recovered 20 health");
 			Room.healthamount(-20);
 			inventory.removeItem("EveryFlavourBeans");
-		}
+			masterRoomMap.get("THE_GREAT_HALL").getInventory().addItem(item);
+				}
 		else if (secondWord.equals("LupinsChocolate") && inventory.hasItem("LupinsChocolate")){
+			Item item = inventory.removeItem("ChocolateFrogs");
 			System.out.println("You have just recovered 20 health");
 			Room.healthamount(-20);
 			inventory.removeItem("LupinsChocolate");
+			masterRoomMap.get("THE_GREAT_HALL").getInventory().addItem(item);
 		}
 		else if (secondWord.equals("SherbetLemon") && inventory.hasItem("SherbetLemon")){
+			Item item = inventory.removeItem("ChocolateFrogs");
 			System.out.println("You have just recovered 20 health");
 			Room.healthamount(-20);
 			inventory.removeItem("SherbetLemon");
+			masterRoomMap.get("THE_GREAT_HALL").getInventory().addItem(item);
 		}
 		else if (secondWord.equals("Harry'sBirthdayCake") && inventory.hasItem("Harry'sBirthdayCake")){
+			Item item = inventory.removeItem("ChocolateFrogs");
 			System.out.println("You have just recovered 20 health");
 			Room.healthamount(-20);
 			inventory.removeItem("Harry'sBirthdayCake");
-			
+			masterRoomMap.get("THE_GREAT_HALL").getInventory().addItem(item);
 			
 		}
 		else 
@@ -607,15 +620,14 @@ class Game {
 			Room.healthamount(50);
 			snape50 = true;
 		}
-		else if(currentRoom.getRoomName().equals("Viaduct Entrance") && haslistened == true){
+		else if(currentRoom.getRoomName().equals("Viaduct Entrance") && haslistened == true && completed == false){
 			System.out.println("Just a reminder before you leave the Viaduct Entrance, that Ron is looking for his rat");
 			haslistened = false;
 		}
 		else if(currentRoom.getRoomName().equals("Boys Washroom") && haslistened == false){
 			Scanner in = new Scanner(System.in);
 			System.out.println("Wait before you leave, My name is Ron and I am looking for my Rat, do you have him?");
-			System.out.println("I will give you Harry's invisibility cloak if you do, if you have it say yes");
-			System.out.println("I also hard of hearing so say yes/no twice");
+			System.out.println("I will give you Harry's invisibility cloak if you do, if you have it say yes if not say any word to leave");
 			if(in.nextLine().equalsIgnoreCase("yes") && haslistened == false){
 				System.out.println("Well then give him to me and we will trade");
 				haslistened = true;
@@ -634,27 +646,28 @@ class Game {
 		}
 		
 		else if(nextRoom.getRoomName().equals("Library Restricted Section") && usedKey == false){
-				System.out.println("You cannot enter this room without a key");
+				System.out.println("You cannot enter this room without a key, if you have a key, state 'use Key'");
 
 					}
+		
 		else if(nextRoom.getRoomName().equals("Quidditch Match") && practiced == false){
 			System.out.println("You cannot access this room until you have practiced");			
 		}
 		
 		else if(currentRoom.getRoomName().equals("Middle Courtyard") && nextRoom.getRoomName().equals("Gryffindor Common Room") && isflying == true){
-			System.out.println("Please Depart from your broom before entering the school");
+			System.out.println("Please depart from your broom before entering the school");
 		}
 		else if(currentRoom.getRoomName().equals("Middle Courtyard") && nextRoom.getRoomName().equals("Long Gallery") && isflying == true){
-			System.out.println("Please Depart from your broom before entering the school");
+			System.out.println("Please depart from your broom before entering the school");
 		}
 		else if(currentRoom.getRoomName().equals("Middle Courtyard") && nextRoom.getRoomName().equals("Library") && isflying == true){
-			System.out.println("Please Depart from your broom before entering the school");
+			System.out.println("Please depart from your broom before entering the school");
 		}
 		else if(nextRoom.getRoomName().equals("Headmaster's Office") && isflying != true){
 			System.out.println("You need to be flying to access this room");
 		}
 		else if(nextRoom.getRoomName().equals("Winged Keys Room") && giveSleep == false){
-			System.out.println("You need to guve a sleeping potion to the dogs to make them fall asleep, you have been here too long, lose 20 points");
+			System.out.println("You need to give a sleeping potion to the dogs to make them fall asleep, you have been here too long, lose 20 points");
 			Room.healthamount(20);
 		}
 		else if(nextRoom.getRoomName().equals("Trophy Room") && wearingInvis != true){
@@ -670,14 +683,12 @@ class Game {
 		}
 		else if(nextRoom.getRoomName().equals("Villian Room") && hasRead == false && hasPlayed == false && hasWonChess == false){
 			System.out.println("You cannot enter the room unless you have read the chess book and played the chess game in this room");
-			System.out.println("Type play once you are ready, I would open the book first though");
+			System.out.println("Type play once you are ready also make sure you have undesrtood the book before playing chess");
 		
 	}
 		else if(hasRead == true && hasPlayed == true && hasWonChess == false){
 			Scanner in = new Scanner(System.in);
 			System.out.println("These are the final minutes of the chess game, will you sacrifice your queen or knight");
-			System.out.println("The answer is in the book/open the book");
-			System.out.println("If you need yo leave the game to read the book type leave");
 			System.out.println("If you know the answer choose between queen or knight");
 			if(in.nextLine().equalsIgnoreCase("knight")){
 				System.out.println("You choose correct, you can now go to the next room, the Villian Room");
@@ -685,7 +696,7 @@ class Game {
 			}
 		
 			else{
-				System.out.println("You chose wrong, lose 20 points and try again");
+				System.out.println("You chose wrong, lose 20 points and try again, read the book to find the answer");
 				Room.healthamount(20);
 			}
 		}
@@ -699,6 +710,7 @@ class Game {
 		else if(currentRoom.getRoomName().equals("Villian Room") && usedStun == true){
 			System.out.println("You have beaten the game and defeated the dark lord");
 			System.out.println("Dumbuldore comes to see you and gives you 150 house points and your house, Gryffindor Wins");
+			System.out.println("You are done the game, you can know quit by using commmand word 'quit'");
 			voldemort = true;
 		}
 		else {

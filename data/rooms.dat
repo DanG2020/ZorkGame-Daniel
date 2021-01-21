@@ -33,10 +33,10 @@ Room Description: This is the central building in Hogwarts where all the classes
 Exit Rooms: N-Middle Courtyard, E-Bell Tower, S-Wand Wizardry Classroom, W-Viaduct Entrance
 Room Name: Wand Wizardry Classroom
 Room Description: Here, Professor Flitwick will teach students different spells.
-Exit Rooms: N-Long Gallery, E-Defense Against The Dark Arts
+Exit Rooms: N-Long Gallery, W-Defense Against The Dark Arts
 Room Name: Defense Against The Dark Arts
 Room Description: This is the defense against the dark arts classroom, Professor Lupin is ready to teach defensive spells.
-Exit Rooms: W-Potions Classroom
+Exit Rooms: W-Potions Classroom, E-Wand Wizardry Classroom
 Room Name: Potions Classroom
 Room Description: This is the potions Classroom, the class is taugh by Professor Snape.
 Exit Rooms: E-Defense Against The Dark Arts
@@ -59,7 +59,7 @@ Room Name: Middle Courtyard
 Room Description: This is an open grassy area in the inner part of Hogwarts.
 Exit Rooms: U-Headmaster's Office, N-Broomstick Practice, S-Long Gallery, E-Library, W-Gryffindor Common Room
 Room Name: Broomstick Practice
-Room Description: Here, Madam Hooch teaches you how to fly on the broomstick
+Room Description: Here, Madam Hooch teaches you how to fly on the broomstick, use command practice to learn to fly.
 Exit Rooms: E-Quidditch Match, S-Middle Courtyard
 Room Name: Trophy Room
 Room Description: Inside the Trophy Room there is a three headed dog.
@@ -74,5 +74,5 @@ Room Name: Villain Room
 Room Description: Voldemort is Infront of you. In order to defeat him use a stun spell
 Exit Rooms: E-Chessboard Chamber
 Room Name: Quidditch Match
-Room Description: A quidditch match has just started and you are playing.
+Room Description: A quidditch match has just started and you are competing, use command to compete.
 Exit Rooms: W-Broomstick Practice

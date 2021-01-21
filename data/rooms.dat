@@ -50,7 +50,7 @@ Room Name: Library
 Room Description: This is the main library at Hogwarts.
 Exit Rooms: E-Library Restricted Section, W-Middle Courtyard
 Room Name: Library Restricted Section
-Room Description: This is the restricted section in the library,on the table you can see a book on Wizards Chess that might be useful.
+Room Description: This is the restricted section in the library,on the table you can see a book on Wizards Chess, use command read to read it.
 Exit Rooms: W-Library
 Room Name: Gryffindor Common Room
 Room Description: In the Gryffindor Common Room, you see Ron's rat.
@@ -62,7 +62,7 @@ Room Name: Broomstick Practice
 Room Description: Here, Madam Hooch teaches you how to fly on the broomstick, use command practice to learn to fly.
 Exit Rooms: E-Quidditch Match, S-Middle Courtyard
 Room Name: Trophy Room
-Room Description: Inside the Trophy Room there is a three headed dog.
+Room Description: Inside the Trophy Room there is a three headed dog, give the dog the SleepingDraught to make it fall asleep.
 Exit Rooms: S-Third Floor, D-Winged Keys Room
 Room Name: Winged Keys Room
 Room Description: There are many key flying around.

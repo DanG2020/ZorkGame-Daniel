@@ -27,11 +27,11 @@ Item Description: This is Ron's rat.
 Openable: false
 Room: GRYFFINDOR_COMMON_ROOM
 Item Name: WizardsChessBook
-Item Description: This is a book that will teach you Wizards Chess.
+Item Description: This is a book that will teach you Wizards Chess. Type read to read it.
 Openable: false
 Room: LIBRARY_RESTRICTED_SECTION
 Item Name: PhoenixTears
-Item Description: These tears will give you instant health.
+Item Description: These tears will give you 100 health. In order to gain health you need to use the PhoenixTears.
 Openable: false
 Room: HEADMASTER'S_OFFICE
 Item Name: SleepingDraught
@@ -46,8 +46,5 @@ Item Name: Alohomora
 Item Description: Allows user to unlock locked doors.
 Openable: false
 Room: WAND_WIZARDRY_CLASSROOM
-Item Name: Key
-Item Description: This is a flying key that is needed to open the next door.
-Openable: false
-Room: WINGED_KEYS_ROOM
+
 

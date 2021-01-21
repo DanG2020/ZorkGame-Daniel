@@ -24,35 +24,27 @@ Openable: false
 Room: THE_GREAT_HALL
 Item Name: Rat
 Item Description: This is Ron's rat.
-Openable: true
-Room: GRYFFINDOR_COMMON_ROOM
-Item Name: InvisibilityCloak
-Item Description: This is Harry's invisibility cloak.
 Openable: false
-Room: BOYS_WASHROOM
+Room: GRYFFINDOR_COMMON_ROOM
 Item Name: WizardsChessBook
 Item Description: This is a book that will teach you Wizards Chess.
-Openable: false
+Openable: true
 Room: LIBRARY_RESTRICTED_SECTION
 Item Name: PhoenixTears
 Item Description: These tears will give you instant health.
-Openable: true
+Openable: false
 Room: HEADMASTER'S_OFFICE
 Item Name: SleepingDraught
 Item Description: This Sleeping Draught is made from Valerian Sprigs from the green houses and will make anyone fall instantly to sleep.
-Openable: true
+Openable: false
 Room: GREEN_HOUSES
-Item Name: StunSpell
+Item Name: Stupefy
 Item Description: Able to stun dark wizards
-Openable: true
+Openable: false
 Room: DEFENSE_AGAINST_THE_DARK_ARTS
 Item Name: Alohomora
 Item Description: Allows user to unlock locked doors.
-Openable: true
-Room: WAND_WIZARDRY_CLASSROOM
-Item Name: WingardiumLeviosa
-Item Description: Allows any item to levitate and will save you from trolls.
-Openable: true
+Openable: false
 Room: WAND_WIZARDRY_CLASSROOM
 Item Name: Key
 Item Description: This is a flying key that is needed to open the next door.

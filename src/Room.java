@@ -103,6 +103,13 @@ public class Room {
   public static int healthreturn(){
     return healthAmount;
   }
+
+  public static boolean healthReturnTF(){
+    if(healthAmount <= 0){
+      return true;
+    }
+    return false;
+  }
   public String shortDescription() {
     return "Room: " + roomName + "\n\n" + description;
   }

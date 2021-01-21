@@ -150,14 +150,19 @@ class Game {
 		// Enter the main command loop.  Here we repeatedly read commands and
 		// execute them until the game is over.
 		boolean finished = false;
-		if(Room.healthreturn() == 0){
-			System.out.println("You have lost all your health, the game is over");
-			finished = true;
-		}
+		
 		
 		while (!finished) {
 			Command command = parser.getCommand();
-			finished = processCommand(command);
+			if(processCommand(command)){
+				finished = true;
+			}
+		
+			if(Room.healthReturnTF() == true){
+				System.out.println("You have lost all your health, the game is over");
+				finished = true;
+			}
+			//finished = processCommand(command);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -169,8 +174,11 @@ class Game {
 		System.out.println();
 		System.out.println("Welcome to Hogwarts!");
 		System.out.println("In this game, you will need to collect items in order to defeat the villian in the end");
+		System.out.println("In order to defeat the villian, you will do a free roam and collect items");
+		System.out.println("To find the villian, you will have to go to the restricted floor, then to the trophy room and then find your way from there");
 		System.out.println("Be careful, theres a chance that Filch's cat may scratch you");
 		System.out.println("To reccover health, eat food, food will be replenished once you have eaten it");
+		System.out.println("There is also a bottle of Pheonix Tears in the Headmaster's Office that will recover 100 health, but you need a broom to enter");
 		System.out.println("Type 'help' if you need help.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -188,6 +196,16 @@ class Game {
 	private static boolean lost10 = false;
 	private static boolean usedKey = false;
 	private static boolean wearingInvis = false;
+	private static boolean snape50 = false;
+	private static boolean giveRat = false;
+	private static boolean haslistened = false;
+	private static boolean giveSleep = false;
+	private static boolean hasSnatched = false;
+	private static boolean hasPlayed = false;
+	private static boolean hasWonChess = true;
+	private static boolean voldemort = false;
+	private static boolean usedStun = false;
+
 	private boolean processCommand(Command command) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
@@ -210,8 +228,53 @@ class Game {
 			else{
 				eat(command.getSecondWord());
 			}
-		} else if (commandWord.equals("jump")) {
+		} 		
+		else if (commandWord.equals("snatched")) {
+			if(currentRoom.getRoomName().equals("Winged Keys Room")){
+				if(isflying != true){
+				System.out.println("You need to be flying in order to snatch");
+				}
+				else{
+					System.out.println("You have just caught a key, and you have used the key to open the door");
+					hasSnatched = true;
+				}
+			}
+		}
+		 else if (commandWord.equals("jump")) {
 			return jump();
+		} else if (commandWord.equals("give")) {
+			if (!command.hasSecondWord())
+			System.out.println("give what?");
+			else{
+				if(command.getSecondWord().equals("Rat")){
+					if(inventory.hasItem("Rat")){
+						if(currentRoom.getRoomName().equals("Boys Washroom")){
+						giveRat = true;
+						System.out.println("You have just given Ron his rat");
+						currentRoom.getInventory().addItem(new Item("InvisibilityCloak", "Harry's invisiblity cloak", false));
+						System.out.println("Thanks for getting me my rat, now my rat and I are going to read resurrection methods for fun, Goodbye!");
+						System.out.println("Write take InvisibilityCloak to claim your prize");
+						haslistened = true;
+						}
+						else{
+							System.out.println("You cannot give the rat in that room");
+						}
+					}
+					else{
+						System.out.println("You do not have a rat to give");
+					}
+				}
+				else if(command.getSecondWord().equals("SleepingDraught") && currentRoom.getRoomName().equals("Trophy Room") && inventory.hasItem("SleepingDraught")){
+					giveSleep = true;
+					System.out.println("You have successfully used the SleepingDraught and the dogs are asleep");
+					inventory.removeItem("SleepingDraught");
+				}
+			
+				else{
+					System.out.println("You cannot give that");
+				}
+			}
+		
 		} else if (commandWord.equals("sit")) {
 			sit();
 		} else if ("udeswn".indexOf(commandWord) > -1) {
@@ -234,7 +297,7 @@ class Game {
 				dropItem(command.getSecondWord());
 		} else if (commandWord.equals("wear")){
 			if(inventory.hasItem("InvisibilityCloak")){
-			System.out.println("You have become invisible, type: off to take off the invisibilty cloak");
+			System.out.println("You have become invisible, type the word: off, to take off the invisibilty cloak");
 			wearingInvis = true;
 			}
 			else{
@@ -258,11 +321,18 @@ class Game {
 				System.out.println("Open what?");
 			else
 				openItem(command.getSecondWord());
-
+		} else if (commandWord.equals("play")){
+			if(currentRoom.getRoomName().equals("Chessboard Chamber")){
+				hasPlayed = true;
+			}
+			else{
+				System.out.println("You cannot play in this room");
+			}
 		} else if (commandWord.equals("use")) {
 			if (!command.hasSecondWord()){
 				System.out.println("Use what?");
 			}
+			
 			else{
 				if(command.getSecondWord().equals("Alohomora")){
 					if(inventory.hasItem("Alohomora")){
@@ -272,9 +342,18 @@ class Game {
 					else{
 						System.out.println("You do not have Alohomora");
 						return hasAlohomora = false;
+				} 
+			}	
+			else if(command.getSecondWord().equals("Stupefy")){
+				if(inventory.hasItem("Stupefy")){
+					System.out.println("You have successfuly used Stupefy");
+					usedStun = true;
+				}
+				else{
+					System.out.println("You do not have Stupefy");
 				}
 			}
-				else if(command.getSecondWord().equals("Wingardium leviosa")){
+			else if(command.getSecondWord().equals("Wingardium leviosa")){
 						if(inventory.hasItem("Wingardium leviosa")){
 							System.out.println("You have used Wingardium leviosa");
 							return hasWing = true;
@@ -479,7 +558,6 @@ class Game {
 	 * otherwise print an error message.
 	 */
 
-
 	private void goRoom(Command command) {
 		if (!command.hasSecondWord() && ("udeswn".indexOf(command.getCommandWord()) < 0)) {
 			// if there is no second word, we don't know where to go...
@@ -515,13 +593,46 @@ class Game {
 		if (nextRoom == null)
 			System.out.println("There is no door!");
 		else if(currentRoom.getRoomName().equals("Girls Washroom") && lost10 == false){
-			System.out.println("You have lost 50 health");
+			System.out.println("Before you leave, you just got smacked by the troll, you have lost 50 health");
 			Room.healthamount(50);
 			lost10 = true;
 		} 
 		else if(currentRoom.getRoomName().equals("Viaduct Entrance") && lost10 == true){
+			System.out.println("Just a reminder before you leave the Viaduct Entrance, there is still a troll in the washroom");
 			lost10 = false;
 		}
+		
+		else if(currentRoom.getRoomName().equals("Potions Classroom") && snape50 == false){
+			System.out.println("Before you leave, Snape has just poured a potion on you, You have lost 50 health");
+			Room.healthamount(50);
+			snape50 = true;
+		}
+		else if(currentRoom.getRoomName().equals("Viaduct Entrance") && haslistened == true){
+			System.out.println("Just a reminder before you leave the Viaduct Entrance, that Ron is looking for his rat");
+			haslistened = false;
+		}
+		else if(currentRoom.getRoomName().equals("Boys Washroom") && haslistened == false){
+			Scanner in = new Scanner(System.in);
+			System.out.println("Wait before you leave, My name is Ron and I am looking for my Rat, do you have him?");
+			System.out.println("I will give you Harry's invisibility cloak if you do, if you have it say yes");
+			System.out.println("I also hard of hearing so say yes/no twice");
+			if(in.nextLine().equalsIgnoreCase("yes") && haslistened == false){
+				System.out.println("Well then give him to me and we will trade");
+				haslistened = true;
+						
+				
+			}			
+			else{
+				System.out.println("I don't know what you mean, I have not studied english to well, I failed the Owl exams, I can only understand yes");
+				System.out.println("I heard my Rats in the gryfindor Common Room but im too afraid to go in their because of Dean");
+				haslistened = true;
+			}
+		}
+		else if(currentRoom.getRoomName().equals("Defense Against The Dark Arts") && snape50 == true){
+			System.out.println("Just a reminder before you leave the Defense Against the Dark Arts Classroom, Snape is still mad at you, so maybe don't go back in");
+			snape50 = false;
+		}
+		
 		else if(nextRoom.getRoomName().equals("Library Restricted Section") && usedKey == false){
 				System.out.println("You cannot enter this room without a key");
 
@@ -542,11 +653,53 @@ class Game {
 		else if(nextRoom.getRoomName().equals("Headmaster's Office") && isflying != true){
 			System.out.println("You need to be flying to access this room");
 		}
-		else if(nextRoom.getRoomName().equals("Headmaster's Office") && isflying != true){
-			System.out.println("You need to be flying to access this room");
+		else if(nextRoom.getRoomName().equals("Winged Keys Room") && giveSleep == false){
+			System.out.println("You need to guve a sleeping potion to the dogs to make them fall asleep, you have been here too long, lose 20 points");
+			Room.healthamount(20);
 		}
 		else if(nextRoom.getRoomName().equals("Trophy Room") && wearingInvis != true){
 			System.out.println("You cannot go to the Trophy Room without an invisibilty cloak");
+		}
+		else if(nextRoom.getRoomName().equals("Trophy Room") && hasAlohomora != true){
+			System.out.println("In order to enter, you need to use Alohomora to unlock the door");
+		}
+		else if(nextRoom.getRoomName().equals("Chessboard Chamber") && hasSnatched == false){
+				System.out.println("You cannot enter the next room until you are on a broom and have snatched a key");
+			
+			
+		}
+		else if(nextRoom.getRoomName().equals("Villian Room") && hasRead == false && hasPlayed == false && hasWonChess == false){
+			System.out.println("You cannot enter the room unless you have read the chess book and played the chess game in this room");
+			System.out.println("Type play once you are ready, I would open the book first though");
+		
+	}
+		else if(hasRead == true && hasPlayed == true && hasWonChess == false){
+			Scanner in = new Scanner(System.in);
+			System.out.println("These are the final minutes of the chess game, will you sacrifice your queen or knight");
+			System.out.println("The answer is in the book/open the book");
+			System.out.println("If you need yo leave the game to read the book type leave");
+			System.out.println("If you know the answer choose between queen or knight");
+			if(in.nextLine().equalsIgnoreCase("knight")){
+				System.out.println("You choose correct, you can now go to the next room, the Villian Room");
+				hasWonChess = true;
+			}
+		
+			else{
+				System.out.println("You chose wrong, lose 20 points and try again");
+				Room.healthamount(20);
+			}
+		}
+		else if(currentRoom.getRoomName().equals("Villian Room") && nextRoom.getRoomName().equals("Chessboard Chamber") && voldemort == false){
+			System.out.println("Yes run away, you will never defeat me");
+			System.out.println("You have just lost 50 health by trying to escape");
+			System.out.println("In order to defeat him, you will need");
+			Room.healthamount(50);
+			voldemort = true;
+		}
+		else if(currentRoom.getRoomName().equals("Villian Room") && usedStun == true){
+			System.out.println("You have beaten the game and defeated the dark lord");
+			System.out.println("Dumbuldore comes to see you and gives you 150 house points and your house, Gryffindor Wins");
+			voldemort = true;
 		}
 		else {
 			currentRoom = nextRoom;

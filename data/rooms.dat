@@ -17,10 +17,10 @@ Room Name: Caretaker's Office
 Room Description: This is Argus Filch's office. There are confiscated items and a key to the Restricted Section of the library.
 Exit Rooms: E-The Great Hall
 Room Name: Boys Washroom
-Room Description: This is the boys Washroom, there you see Ron Weasley. If you have his rat, he will give you Harry's invisibility Cloak.
+Room Description: This is the boys Washroom there you see Ron Weasley.
 Exit Rooms: S-Viaduct Entrance
 Room Name: Girls Washroom
-Room Description: There is a troll in the washroom, lose 50 health.
+Room Description: There is a troll in the washroom.
 Exit Rooms: N-Viaduct Entrance
 Room Name: Third Floor
 Room Description: This is the restricted floor at Hogwarts, you cannot be seen around here.
@@ -38,11 +38,11 @@ Room Name: Defense Against The Dark Arts
 Room Description: This is the defense against the dark arts classroom, Professor Lupin is ready to teach defensive spells.
 Exit Rooms: W-Potions Classroom
 Room Name: Potions Classroom
-Room Description: When you enter the Potions Classroom, Snape gives you a bad potion.
+Room Description: This is the potions Classroom, the class is taugh by Professor Snape.
 Exit Rooms: E-Defense Against The Dark Arts
 Room Name: Bell Tower
 Room Description: This is the entrance to the Green Houses.
-Exit Rooms: W- Long Gallery, E-Green Houses
+Exit Rooms: W-Long Gallery, E-Green Houses
 Room Name: Green Houses
 Room Description: This is the Hogwarts Green House Professor Sprout teaches you about a plant that makes you sleep.
 Exit Rooms: W-Bell Tower
@@ -71,7 +71,7 @@ Room Name: Chessboard Chamber
 Room Description: There is a large chessboard Infront of you.
 Exit Rooms: E-Winged Keys Room, W-Villain Room
 Room Name: Villain Room
-Room Description: Voldemort is Infront of you.
+Room Description: Voldemort is Infront of you. In order to defeat him use a stun spell
 Exit Rooms: E-Chessboard Chamber
 Room Name: Quidditch Match
 Room Description: A quidditch match has just started and you are playing.
